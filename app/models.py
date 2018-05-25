@@ -8,11 +8,11 @@ class User(db.Model):
 
 	def __repr__(self):
 		return '<User %r>' % (self.nickname)
-class Post(db.Model):
-	id = db.Column(db.Integer, primary_key = True)
-	body = db.Column(db.String(140))
-	timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
-	user_id = db.Column(db.Integer, db.ForeignKey('user_id'))
+# class Post(db.Model):
+# 	id = db.Column(db.Integer, primary_key = True)
+# 	body = db.Column(db.String(140))
+# 	timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+# 	user_id = db.Column(db.Integer, db.ForeignKey('user_id'))
 
-	def __repr__(self):
-		return '<Post %r>' % (self.body)
+# 	def __repr__(self):
+# 		return '<Post %r>' % (self.body)
